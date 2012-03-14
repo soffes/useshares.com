@@ -1,0 +1,71 @@
+<!doctype html>  
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Shares App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style type="text/css" media="screen">
+    @font-face {
+      font-family: 'Bebas';
+      src: url('fonts/BebasNeue-webfont.eot');
+      src: local('☺'), 
+             url('fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    body {
+      font: normal 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      font-family: Bebas;
+      font-size:3em;
+    }
+  </style>
+
+  <script src="js/modernizr-1.6.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1>Shares App</h1>
+      <h2>See how yours shares are doing. </h2>
+      <a href="#" class="download-button">Get Shares on the App Store</a>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p class="copyright">&copy;2012 — A Sam Soffes &amp; Josh Brewer production.</p>
+      <a href="#" class="contact">Contact</a>
+    </footer>
+  </div> <!--! end of #container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+
+  <!-- <script>
+   var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+  </script> -->
+
+</body>
+</html>
