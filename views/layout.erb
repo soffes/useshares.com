@@ -1,4 +1,4 @@
-<!doctype html>  
+<!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
@@ -16,24 +16,200 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style type="text/css" media="screen">
+    /*
+      mainblue = #24577e
+      mainbg/mainlighttext = #e6e2d6
+      green = #247d2d
+      grey = #777
+    */
     @font-face {
-      font-family: 'Bebas';
+      font-family: 'bebas-neue';
       src: url('fonts/BebasNeue-webfont.eot');
-      src: local('☺'), 
+      src: local('☺'),
              url('fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
+    html {
+      background: #0c1d2a url(images/launchpage.jpg) no-repeat fixed center bottom;
+      background-size: 120% auto;
+      height: 100%;
+    }
     body {
-      font: normal 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      /*background: url(images/pattern.png) repeat;*/
+      color: #e6e2d6;
+      font: normal 12px/1.5 "bebas-neue", "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
+      text-align: center;
+      box-sizing: border-box;
+      text-transform: uppercase;
+    }
+    .forios, .tagline, .placeholder, input {
+      font-family: "Hoefler Text", Garamond, Baskerville, "Baskerville Old Face", "Times New Roman", serif;
+      font-style: italic;
+      text-transform: none;
+    }
+    #container {
+      margin: 0 auto;
+      padding: 0 5%;
+      background: rgba(0,0,0,0.3);
+      min-height: 100%;
+      width: 90%;
+    }
+    footer {
+      margin-top: 4em;
+      color: rgba(230, 226,214, 0.4);
     }
     h1 {
-      font-family: Bebas;
-      font-size:3em;
+      position: relative;
+      display: inline-block;
+      font-size:5.625em;
+      line-height: 1;
+      margin: 1.875rem 0 0.75rem;
     }
+    h2 {
+      margin-top: 0;
+      color: rgba(230, 226,214, 0.6);
+      font-size: 1.875em;
+      letter-spacing: 0.15em;
+    }
+    .unicode {
+      font-family: arial;
+      font-size: 1.5em;
+    }
+    .forios {
+      position: absolute;
+      top: 0.2em;
+      right: 6.75em;
+      font-size: 0.133em;
+      font-size: 0.75rem;
+      font-weight: normal;
+      color: rgba(230, 226,214, 0.8);
+    }
+    .seal {
+      position: relative;
+      display: inline-block;
+      bottom:-0.2em;
+    }
+    .seal img {
+      max-width: 100%;
+    }
+    .tagline {
+      font-size: 1.25em;
+      border: 1px solid #38444c;
+      border-width: 1px 0;
+      margin: 0;
+      padding: 1.275em 0.5em;
+    }
+    .cta {
+      font-size: 1.3125em
+    }
+    /* ==form */
+    .signup {
+      position: relative;
+      width: 100%
+      margin: 0 auto;
+    }
+    .signup input {
+      margin: 0 auto;
+      padding:1em 3em;
+      background: #33383c;
+      border: 1px solid #1a1a1a;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      box-shadow: inset 0px 2px 2px rgba(0,0,0,0.75)
+      -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+              border-radius: 5px;
+      color: #e6e2d6;
+    }
+    .signup input+.placeholder {
+      position: absolute;
+      display: block;
+      top: 0.75em;
+      width: 100%;
+      font-size: 1em;
+      font-style: normal;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    .signup input:focus + .placeholder,
+    .signup input:hover + span {
+      display: none;
+      cursor: pointer;
+    }
+    .signup button {
+      display:block;
+      width: 7em;
+      margin: 1.375em auto;
+      padding: 0.6em 0.5em 0.25em;
+      color: #bcbeb9;
+      font-family: "bebas-neue";
+      font-size: 1.25em;
+      letter-spacing: 0.1em;
+      text-align: center;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.7);
+      -webkit-box-shadow: inset 2px 2px 0 #0c1d2a, inset -2px -2px 0 #0c1d2a, inset 3px 3px 0 rgba(255,255,255,0.3), inset -3px -3px 0 rgba(255,255,255,0.3);
+    }
+    .signup button:hover {
+      cursor: pointer;
+      -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    }
+
+    /* One-column - iPhone portrait and any 320px device */
+@media (max-width:480px){
+  .seal {
+    width: 1em;
+    height: 1em;
+    bottom: -0.125em;
+  }
+  /*body {background: none;}*/
+
+}
+
+@media (min-width:600px) {
+  #container{
+    width: 37.5em;
+    font-size: 16px;
+  }
+}
+
+/* 15" MacBook Pro
+@media (min-width:1281px) and (max-width:1600px){
+  .container{
+    width: 1280px;
+  }
+}
+
+/* 17" MacBook Pro, iMac
+@media (min-width:1601px) and (max-width:1920px){
+  .container{
+    width: 1600px;
+  }
+}
+
+/* HD
+@media (min-width:1920px) and (max-width:2240px){
+  .container{
+    width: 1920px;
+  }
+}
+
+/* 27"
+@media (min-width:2241px) and (max-width:2560px){
+  #container{
+    width: 2240px;
+  }
+}*/
+
   </style>
 
-  <script src="js/modernizr-1.6.min.js"></script>
+  <!--script src="js/modernizr-1.6.min.js"></script-->
 
 </head>
 
@@ -41,20 +217,20 @@
 
   <div id="container">
     <header>
-      <h1>Shares App</h1>
-      <h2>See how yours shares are doing. </h2>
-      <a href="#" class="download-button">Get Shares on the App Store</a>
+      <h1 class="branding">Shares <span class="forios">for iOS</span><span class="seal"><img src="images/seal.png" alt="" ></span></h1>
+      <h2>Your gains, at a glance</h2>
     </header>
+
 
     <%= yield %>
 
     <footer>
-      <p class="copyright">&copy;2012 — A Sam Soffes &amp; Josh Brewer production.</p>
-      <a href="#" class="contact">Contact</a>
+      <p class="copyright">
+        &copy;2012 — Brought to you by Sam Soffes &amp; Josh Brewer.
+        <a href="#" class="contact">Contact</a>
+      </p>
     </footer>
   </div> <!--! end of #container -->
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
 
   <!-- <script>
    var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
