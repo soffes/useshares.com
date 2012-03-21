@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'bebas-neue';
+  src: url('fonts/BebasNeue-webfont.eot');
+  src: local('☺'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background: #050c12 url(images/bg_dark_blur.jpg) no-repeat fixed center bottom;
+  -webkit-background-size: 120% auto;
+  -moz-background-size: 120% auto;
+  background-size: 120% auto;
+  color: #e6e2d6;
+  font: normal 12px/1.5 "bebas-neue", "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+a {
+  color: #787c7b;
+  color: rgba(230, 226,214, 0.4);
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  -webkit-box-sizing: padding-box;
+     -moz-box-sizing: padding-box;
+          box-sizing: padding-box;
+}
+
+a:hover {
+  color: #e6e2d6;
+  border-bottom: 1px solid;
+}
+
+.forios,.tagline,.placeholder,input {
+  font-family: "Hoefler Text", Garamond, Baskerville, "Baskerville Old Face", "Times New Roman", serif;
+  font-style: italic;
+  text-transform: none;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 0 5%;
+  background: rgba(0,0,0,0.3);
+  min-height: 100%;
+  width: 100%;
+}
+
+footer {
+  color: rgba(230, 226,214, 0.4);
+  margin: 4em auto 0;
+  padding-bottom: 1em;
+  -webkit-box-sizing: padding-box;
+     -moz-box-sizing: padding-box;
+          box-sizing: padding-box;
+}
+
+h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 5.625em;
+  line-height: 1;
+  margin: 1.875rem 0 0.75rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: #bcc2c0;
+  color: rgba(230, 226,214, 0.6);
+  font-size: 1.875em;
+  letter-spacing: 0.15em;
+}
+
+.unicode {
+  position: relative;
+  top: 0.1em;
+  font-family: arial, monotype, sans-serif;
+  font-size: 1.5em;
+}
+.win .unicode {display: none;}
+.forios {
+  position: absolute;
+  top: 0.8em;
+  right: 6.6em;
+  font-size: 0.133em;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #787c7b;
+  color: rgba(230, 226,214, 0.4);
+}
+
+.seal {
+  position: relative;
+  display: inline-block;
+  bottom: -0.2em;
+}
+
+.seal img {
+  max-width: 100%;
+}
+
+.tagline {
+  font-size: 1.25em;
+  border: 1px solid #38444c;
+  border-width: 1px 0;
+  margin: 0;
+  padding: 1.275em 0.5em;
+}
+
+.cta {
+  font-size: 1.3125em;
+}
+
+.signup {
+  position: relative;
+  width: 100% margin:  0 auto;
+}
+
+/*.signup input {
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  background: #33383c;
+  border: 1px solid #1a1a1a;
+  color: #e6e2d6;
+  font-style: normal;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
+     -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
+          box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
+}
+
+.signup input + .placeholder {
+  position: absolute;
+  display: block;
+  top: 0.75em;
+  width: 100%;
+  font-size: 1em;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.signup input:focus + .placeholder,
+.signup input:hover + span {
+  display: none;
+  cursor: pointer;
+}*/
+
+.signup input {
+  margin: 0 auto;
+  width: 20em;
+  padding: 1em;
+  background: #33383c;
+  border: 1px solid #1a1a1a;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #e6e2d6;
+}
+/*.signup input {
+  border: 0;
+  background: none;
+  position: absolute;
+  display: block;
+  top: -0.6em;
+  left: 5em;
+  text-align: center;
+  font-size: 1em;
+  z-index: 1;
+}
+.signup input:focus + .placeholder,
+.signup input:valid + .placeholder {
+  color: rgba(0,0,0,0);
+}*/
+
+
+.signup button {
+  display: block;
+  position: relative;
+  width: 7em;
+  margin: 1.375em auto;
+  padding: 0.6em 0.5em 0.25em;
+  color: #bcbeb9;
+  cursor: pointer;
+  font-family: "bebas-neue";
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+.win.chrome .signup button,
+.win.gecko .signup button {
+  padding-top: 0.25em;
+}
+
+.signup button:before {
+  position: absolute;
+  top: -0.25em;
+  left: 0.175em;
+  right: 0.175em;
+  bottom: -0.25em;
+  content: "";
+  border: 1px solid rgba(255,255,255,0.9);
+  z-index:-1;
+}
+.win.ff3_6 .signup button:before {
+  border: 0;
+  -moz-box-shadow: none;
+}
+
+.signup button:hover,
+.signup button:hover:before {
+  -webkit-transition: all .1s ease-in-out;
+     -moz-transition: all .1s ease-in-out;
+       -o-transition: all .1s ease-in-out;
+      -ms-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
+  -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.4);
+     -moz-box-shadow: 0 0 15px rgba(255,255,255,0.4);
+          box-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+.signup button:hover:before {
+  top: -0.25em;
+  left: -0.25em;
+  right: -0.25em;
+  bottom: -0.25em;
+}
+
+@media (max-width: 319px) {
+  .forios {
+    top: -1.75em;
+    right: 0;
+  }
+
+  .seal {
+    display: none;
+  }
+
+  .signup input {
+    padding: 1em;
+  }
+
+}
+
+@media (max-width:480px) {
+  .forios {
+    top: 0.2em;
+  }
+  .seal {
+  width: 1em;
+  height: 1em;
+  bottom: -0.125em;
+  }
+  .contact {margin-left: 1em;}
+}
+
+@media (min-width:600px) {
+  body {
+  font-size: 16px;
+  }
+
+  #container {
+    width: 37.5em;
+    padding: 0 3.75em;
+  }
+
+  .forios {
+    right: 8.75em;
+    top: 0.8em;
+  }
+
+  .seal {
+    bottom: -0.15em;
+  }
+
+  .tagline {
+    font-size: 1.4375em;
+    padding: 1.5em 1em;
+  }
+
+  .cta {
+    letter-spacing: 0.1em;
+  }
+
+  .signup input + .placeholder {
+    font-size: 0.875em;
+  }
+
+  footer {
+    letter-spacing: 0.1em;
+  }
+  .contact {
+    margin-left: 2em;
+  }
+
+}
+@media (min-width:1200px) {
+  body {
+    background: #0c1d2a url(images/bg_dark_blur.jpg) no-repeat fixed center 70%;
+  }
+}
