@@ -28,12 +28,11 @@
   <div id="container">
 
     <header>
-
-      <h1 class="branding">Shares <span class="forios">for iOS</span></h1>
-
-      <h2>Your gains, at a glance</h2>
-
-      <a href="" class="app-store">Available on the iPhone app store</a>
+      <img src="images/icon_57.png" alt="" />
+      <hgroup>
+        <h1>Shares</h1>
+        <h2>Your gains, at a glance</h2>
+      </hgroup>
 
     </header>
 
@@ -73,54 +72,11 @@
     });
     // add screenshots if tablet or bigger
     if (document.documentElement.clientWidth > 600) {
-      var aside = document.createElement('aside');
-      document.getElementById('main').appendChild(aside);
-      var fone = document.createElement('img');
-      fone.src = '../images/iphone.png';
-      fone.class = 'iphone';
-      aside.appendChild(fone);
-      var storeLink = document.createElement('a');
-      storeLink.href = "http://itunes.apple.com/store/sharesapp";
-      storeLink.class = "app-store"
-      aside.appendChild(storeLink);
+      $('#main').after('<aside><div class="iphone"></div><a href="http://itunes.com/apps/shares" class="app-store">Available on the iPhone app store</a></aside>');
+      $('header').append('<a href="http://itunes.com/apps/shares" class="app-store">Available on the iPhone app store</a>')
     }
   </script>
-  <script>
-    /* Normalized hide address bar for iOS & Android (c) Scott Jehl, scottjehl.com MIT License */
-    (function( win ){
-      var doc = win.document;
 
-      // If there's a hash, or addEventListener is undefined, stop here
-      if( !location.hash && win.addEventListener ){
-
-        //scroll to 1
-        window.scrollTo( 0, 1 );
-        var scrollTop = 1,
-          getScrollTop = function(){
-            return win.pageYOffset || doc.compatMode === "CSS1Compat" && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
-          },
-
-          //reset to 0 on bodyready, if needed
-          bodycheck = setInterval(function(){
-            if( doc.body ){
-              clearInterval( bodycheck );
-              scrollTop = getScrollTop();
-              win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
-            }
-          }, 15 );
-
-        win.addEventListener( "load", function(){
-          setTimeout(function(){
-            //at load, if user hasn't scrolled more than 20 or so...
-            if( getScrollTop() < 20 ){
-              //reset to hide addr bar at onload
-              win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
-            }
-          }, 0);
-        } );
-      }
-    })( this );
-  </script>
   <script type="text/javascript">var _gauges=_gauges||[];(function(){var t=document.createElement('script');t.async=true;t.id='gauges-tracker';t.setAttribute('data-site-id','4f59b56af5a1f55b6d00001d');t.src='//secure.gaug.es/track.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(t, s);})();</script>
 </body>
 </html>
