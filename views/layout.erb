@@ -12,10 +12,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css" />
 
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -38,7 +38,7 @@
 
     <%= yield %>
 
-    <footer>
+    <footer class="da-all">
 
       <p class="copyright">
         &copy;2012 — Brought to you by <a href="http://samsoff.es" rel="external nofollow" target="_blank">Sam Soffes</a> &amp; <a href="http://jbrewer.me" rel="external nofollow" target="_blank">Josh Brewer</a>.
@@ -72,7 +72,7 @@
     });
     // add screenshots if tablet or bigger
     if (document.documentElement.clientWidth > 600) {
-      $('#main').after('<aside><div class="iphone"></div><a href="http://itunes.com/apps/shares" class="app-store">Available on the iPhone app store</a></aside>');
+      //$('#main').append('<aside><div class="iphone"><img src="images/iphone_empty.png" alt="" /></div><a href="http://itunes.com/apps/shares" class="app-store">Available on the iPhone app store</a></aside>');
       $('header').append('<a href="http://itunes.com/apps/shares" class="app-store">Available on the iPhone app store</a>')
     }
   </script>
