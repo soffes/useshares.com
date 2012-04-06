@@ -24,6 +24,11 @@ tan: #e8e4d8
 
 html {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 body {
@@ -158,7 +163,7 @@ header .app-store {
 .iphone {
   position: relative;
   max-width: 744px;
-  min-height: 396px;
+  max-height: 396px;
   padding-top: 150%;
 }
 
@@ -192,6 +197,7 @@ header .app-store {
   background-image: -o-linear-gradient(top, #507998 0%,#24577e 100%); /* Opera 11.10+ */
   background-image: linear-gradient(top, #507998 0%,#24577e 100%); /* W3C */
   font-family: "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
   font-size: 1.25em;
   text-shadow: 0 1px 0 #214f73;
   -webkit-border-radius: 0.375em;
