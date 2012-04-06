@@ -25,11 +25,11 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-/*  background: #e6e2d6 url(../images/bg_texture.png);*/
-  background: white;
-  color: #444;
-  font: normal 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  background: #1d1d1d;
+  color: #999;
+  /*font: normal 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font: normal 14px/1.5 Georgia, "Times New Roman", serif;
+  text-shadow: 0 1px 1px #111;
 }
 
 img {
@@ -37,7 +37,9 @@ img {
 }
 
 a {
+  color: #507998;
   text-decoration: none;
+  text-shadow: none;
   border-bottom: 1px dotted;
   -webkit-box-sizing: padding-box;
      -moz-box-sizing: padding-box;
@@ -45,7 +47,7 @@ a {
 }
 
 a:hover {
-  color: #e6e2d6;
+  color: #24577e;
   border-bottom: 1px solid;
 }
 .app-store,
@@ -54,24 +56,34 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  font-family: "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;;
+  font-family: "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
 }
 h1 {
   color: #24577e;
+  color: #ccc;
   font-size: 2.25em;
 }
 
 /* basic layout */
 #container {
   width: 100%;
-  padding: 5%;
+  max-width: 73em;
+  padding: 0 5%;
+  margin: 0 auto;
+  background: rgb(29,29,29);
+  background:     -moz-radial-gradient(center, ellipse cover,  rgba(45,45,45,1) 0%, rgba(29,29,29,1) 75%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(45,45,45,1)), color-stop(100%,rgba(29,29,29,1))); /* Chrome,Safari4+ */
+  background:  -webkit-radial-gradient(center, ellipse cover,  rgba(45,45,45,1) 0%,rgba(29,29,29,1) 75%); /* Chrome10+,Safari5.1+ */
+  background:       -o-radial-gradient(center, ellipse cover,  rgba(45,45,45,1) 0%,rgba(29,29,29,1) 75%); /* Opera 12+ */
+  background:      -ms-radial-gradient(center, ellipse cover,  rgba(45,45,45,1) 0%,rgba(29,29,29,1) 75%); /* IE10+ */
+  background:          radial-gradient(center, ellipse cover,  rgba(45,45,45,1) 0%,rgba(29,29,29,1) 75%); /* W3C */
 }
 
 header {
   position: relative;
-  background: url(../images/line.png) repeat-x 0 100%;
-  padding-bottom: 1em;
-  text-shadow: rgba(255,255,255,0.2) 0 1px 1px;
+  padding: 1em 0;
+    background: rgba(29,29,29,1);
+  border-bottom: 3px double #333;
 }
 header h1 {
   margin: 0;
@@ -81,7 +93,6 @@ header h1 {
 header h2 {
   margin: -0.7em 0 0;
   font-size: 1.25rem;
-  color: #777;
 }
 header img {
   margin-right: 0.5em;
@@ -89,24 +100,18 @@ header img {
 }
 
 footer {
+  padding: 1em 0;
   font-size: 0.75rem;
 }
 
-.features {
-  width: 100%;
-  margin: 1em 0;
-  padding: 0;
-  list-style-type: none;
-}
-.features li {
-  background: url(../images/line.png) repeat-x 0 100%;
-  padding: 1em 0;
-}
-
 .disclaimer {
-  font-family: Georgia, "Times New Roman", serif;
+  padding-top:0;
+  margin-top:0;
+  margin-bottom:2.5em;
   font-size: 0.75em;
   font-style: italic;
+  color: #777;
+  text-shadow: none;
 }
 
 .app-store {
@@ -122,14 +127,75 @@ footer {
 header .app-store {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 1.15em;
 }
+
+.buy {
+  margin: 2em 0 4em;
+}
+
+/* buy button */
+.button {
+  padding: 0.75em;
+  color: #ddd;
+  border: 3px solid #222;
+  background-color: #24577e; /* Old browsers */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  background-image: -moz-linear-gradient(top, #507998 0%, #24577e 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#507998), color-stop(100%,#24577e)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, #507998 0%,#24577e 100%); /* Chrome 10+,Safari 5.1+ */
+  background-image: -ms-linear-gradient(top, #507998 0%,#24577e 100%); /* IE10+ */
+  background-image: -o-linear-gradient(top, #507998 0%,#24577e 100%); /* Opera 11.10+ */
+  background-image: linear-gradient(top, #507998 0%,#24577e 100%); /* W3C */
+  font-family: "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.25em;
+  text-shadow: 0 1px 0 #214f73;
+  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.08);
+     -moz-box-shadow: 0 1px 0 rgba(255,255,255,.08);
+          box-shadow: 0 1px 0 rgba(255,255,255,.08);
+  -webkit-border-radius: 0.5em;
+     -moz-border-radius: 0.5em;
+          border-radius: 0.5em;
+  -webkit-background-clip: padding-box;
+}
+.button:hover {
+  background: #24577e;
+  border: 3px solid #222;
+  color: #fff;
+}
+.button:active {
+  background: #1a3e59;
+}
+.button em {
+  font-style: normal;
+  font-size:1.25em;
+}
+
 
 #main h1 {
   line-height: 1.1;
+  font-size: 2.25em;
+  width: 92%;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.04em;
+  color: #ccc;
 }
 
+.buzz {
+  margin: 1em 0;
+}
 
+blockquote {
+  margin:0;
+  font-style: italic;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+blockquote footer {
+  text-align: right;
+  padding-top: 0;
+}
 
 /* mailing list signup form */
 .mailinglist-form {
@@ -217,10 +283,22 @@ header .app-store {
   body {
     font-size: 16px;
   }
+  #container {
+    max-width: 64em;
+  }
   #main {
     position: relative;
     width: 55%;
     margin-left:45%;
+    min-height: 47em;
+  }
+  #main h1 {
+    font-size: 3.25em;
+    width: 90%;
+    margin-bottom: 0.5em;
+  }
+  .valueprop {
+    font-size: 1.25em;
   }
   aside {
     width: 75%;
@@ -235,116 +313,18 @@ header .app-store {
     width: 100%;
     height: 100%;
     position: relative;
-/*    background: url(../images/screenshot.png) no-repeat 50% 51%;
-    background-size: 88%;*/
+  }
+  header h1 {
+    line-height: 1.375;
+  }
+  header h2 {
+    margin: -0.7em 0 0;
+    font-size: 1.25rem;
+    color: #777;
   }
 
 }
 
-/* Grids generated by Gridset: http://gridsetapp.com */
 
-@media only screen and (max-width:600px){
-
-/* Mobile grid: 2 column / gutter: 6.25% ---------------------------------------- */
-
-[class*=m1],[class*=m2],.m-all{display:block;float:left;margin-right:6.25%;margin-left:0;}.m1,.m2{width:46.875%;}.m-all{width:100%;margin-left:0;margin-right:0;}
-
-/* Mobile grid margins and clearing ----- */
-
-[class*=-m2] [class*=-m2],[class*=-m2] .m2,[class*=-m2],.m2{margin-right:0;}
-
-/* Mobile grid padding ----- */
-
-.m-pad{padding-left:3.125%;padding-right:3.125%;left:-3.125%;margin-right:0;}.m-padin{padding-left:3.125%;padding-right:3.125%;}.m-padfull{padding-left:6.25%;padding-right:6.25%;left:-6.25%;margin-right:0;}.m-padinfull{padding-left:6.25%;padding-right:6.25%;}.m-pad,.m-padfull{position:relative;}.m-padin,.m-padinfull{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}[class*=-m2].m-pad,.m2.m-pad,.m-padfull{margin-right:-6.25%;}[class*=-m2].m-padfull,.m2.m-padfull{margin-right:-12.5%;}
-
-/* Mobile grid relationships ----- */
-
-.m2,.m2.m2.m-clear{margin-left:53.125%;}[class*=m1-] [class*=m1-],[class*=m1-] .m1,[class*=m1]+[class*=m2],[class*=m2-] [class*=m2-],[class*=m2-] .m2,[class*=m2]+[class*=m3]{margin-left:0;}
-
-.m1,[class*=m1-],.m-all,.m-clear{clear:left;}
-
-/* Mobile hiding ----- */
-
-.m-hide{display:none !important;}
-
-}
-
-@media only screen and (min-width:600px) and (max-width:768px){
-
-/* Tablet grid: 4 column / gutter: 2.60416667% ---------------------------------------- */
-
-[class*=t1],[class*=t2],[class*=t3],[class*=t4],.t-all{display:block;float:left;margin-right:2.60416667%;margin-left:0;}.t1,.t2,.t3,.t4{width:23.046875%;}.t1-t3 .t1,.t1-t3 .t2,.t1-t3 .t3,.t2-t4 .t2,.t2-t4 .t3,.t2-t4 .t4{width:30.99824868%;}.t1-t2 .t1,.t1-t2 .t2,.t2-t3 .t2,.t2-t3 .t3,.t3-t4 .t3,.t3-t4 .t4{width:47.32620321%;}.t1-t2,.t2-t3,.t3-t4{width:48.69791667%;}.t1-t3 .t1-t2,.t1-t3 .t2-t3,.t2-t4 .t2-t3,.t2-t4 .t3-t4{width:65.49912434%;}.t1-t3,.t2-t4{width:74.34895834%;}.t-all{width:100%;margin-left:0;margin-right:0;}
-
-/* Tablet grid margins and clearing ----- */
-
-.t1-t3 .t1,.t1-t3 [class*=t2],.t1-t3 .t2,.t2-t4 .t2,.t2-t4 [class*=t3],.t2-t4 .t3{margin-right:3.502626974397%;}.t1-t2 .t1,.t2-t3 .t2,.t3-t4 .t3{margin-right:5.3475935893666%;}[class*=-t2] [class*=-t2],[class*=-t2] .t2,[class*=-t3] [class*=-t3],[class*=-t3] .t3,[class*=-t4] [class*=-t4],[class*=-t4] .t4,[class*=-t4],.t4{margin-right:0;}
-
-/* Tablet grid padding ----- */
-
-.t-pad{padding-left:1.30208334%;padding-right:1.30208334%;left:-1.30208334%;margin-right:0;}.t-padin{padding-left:1.30208334%;padding-right:1.30208334%;}.t1-t3 .t-pad,.t2-t4 .t-pad{padding-left:1.75131349%;padding-right:1.75131349%;left:-1.75131349%;margin-right:0;}.t1-t3 .t-padin,.t2-t4 .t-padin{padding-left:1.75131349%;padding-right:1.75131349%;}.t-padfull{padding-left:2.60416667%;padding-right:2.60416667%;left:-2.60416667%;margin-right:0;}.t-padinfull{padding-left:2.60416667%;padding-right:2.60416667%;}.t1-t2 .t-pad,.t2-t3 .t-pad,.t3-t4 .t-pad{padding-left:2.67379679%;padding-right:2.67379679%;left:-2.67379679%;margin-right:0;}.t1-t2 .t-padin,.t2-t3 .t-padin,.t3-t4 .t-padin{padding-left:2.67379679%;padding-right:2.67379679%;}.t1-t3 .t-padfull,.t2-t4 .t-padfull{padding-left:3.50262697%;padding-right:3.50262697%;left:-3.50262697%;margin-right:0;}.t1-t3 .t-padinfull,.t2-t4 .t-padinfull{padding-left:3.50262697%;padding-right:3.50262697%;}.t1-t2 .t-padfull,.t2-t3 .t-padfull,.t3-t4 .t-padfull{padding-left:5.34759359%;padding-right:5.34759359%;left:-5.34759359%;margin-right:0;}.t1-t2 .t-padinfull,.t2-t3 .t-padinfull,.t3-t4 .t-padinfull{padding-left:5.34759359%;padding-right:5.34759359%;}.t-pad,.t-padfull{position:relative;}.t-padin,.t-padinfull{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}[class*=-t4].t-pad,.t4.t-pad,.t-padfull{margin-right:-2.60416667%;}.t1-t3 [class*=-t3].t-pad,.t1-t3 .t3.t-pad,.t1-t3 .t-padfull,.t2-t4 [class*=-t4].t-pad,.t2-t4 .t4.t-pad,.t2-t4 .t-padfull{margin-right:-3.50262697%;}[class*=-t4].t-padfull,.t4.t-padfull{margin-right:-5.20833334%;}.t1-t2 [class*=-t2].t-pad,.t1-t2 .t2.t-pad,.t1-t2 .t-padfull,.t2-t3 [class*=-t3].t-pad,.t2-t3 .t3.t-pad,.t2-t3 .t-padfull,.t3-t4 [class*=-t4].t-pad,.t3-t4 .t4.t-pad,.t3-t4 .t-padfull{margin-right:-5.34759359%;}.t1-t3 [class*=-t3].t-padfull,.t1-t3 .t3.t-padfull,.t2-t4 [class*=-t4].t-padfull,.t2-t4 .t4.t-padfull{margin-right:-7.00525395%;}.t1-t2 [class*=-t2].t-padfull,.t1-t2 .t2.t-padfull,.t2-t3 [class*=-t3].t-padfull,.t2-t3 .t3.t-padfull,.t3-t4 [class*=-t4].t-padfull,.t3-t4 .t4.t-padfull{margin-right:-10.69518718%;}
-
-/* Tablet grid relationships ----- */
-
-.t1+[class*=t3-],.t1+.t3,[class*=t2-],[class*=t2-][class*=t2-].t-clear,.t2,.t2.t2.t-clear,[class*=-t2]+.t4,.t2+.t4{margin-left:25.65104167%;}.t1-t3 .t1+.t3,.t1-t3 [class*=t2-],.t1-t3 [class*=t2-][class*=t2-].t-clear,.t1-t3 .t2,.t1-t3 .t2.t2.t-clear,.t2-t4 .t2+.t4,.t2-t4 [class*=t3-],.t2-t4 [class*=t3-][class*=t3-].t-clear,.t2-t4 .t3,.t2-t4 .t3.t3.t-clear{margin-left:34.50087566%;}.t1+.t4,[class*=t3-],[class*=t3-][class*=t3-].t-clear,.t3,.t3.t3.t-clear{margin-left:51.30208334%;}.t1-t2 .t2,.t1-t2 .t2.t2.t-clear,.t2-t3 .t3,.t2-t3 .t3.t3.t-clear,.t3-t4 .t4,.t3-t4 .t4.t4.t-clear{margin-left:52.67379679%;}.t1-t3 .t3,.t1-t3 .t3.t3.t-clear,.t2-t4 .t4,.t2-t4 .t4.t4.t-clear{margin-left:69.00175132%;}.t4,.t4.t4.t-clear{margin-left:76.95312501%;}[class*=t1-] [class*=t1-],[class*=t1-] .t1,[class*=t1]+[class*=t2],[class*=t2-] [class*=t2-],[class*=t2-] .t2,[class*=t2]+[class*=t3],[class*=t3-] [class*=t3-],[class*=t3-] .t3,[class*=t3]+[class*=t4],[class*=t4-] [class*=t4-],[class*=t4-] .t4,[class*=t4]+[class*=t5]{margin-left:0;}
-
-.t1,[class*=t1-],.t-all,.t-clear{clear:left;}
-
-/* Tablet hiding ----- */
-
-.t-hide{display:none !important;}
-
-}
-
-@media only screen and (min-width:768px){
-
-/* Desktop A grid: 6 column / gutter: 1.953125% ---------------------------------------- */
-
-[class*=da1],[class*=da2],[class*=da3],[class*=da4],[class*=da5],[class*=da6],.da-all{display:block;float:left;margin-right:1.953125%;margin-left:0;}.da1,.da2,.da3,.da4,.da5,.da6{width:15.0390625%;}.da1-da5 .da1,.da1-da5 .da2,.da1-da5 .da3,.da1-da5 .da4,.da1-da5 .da5,.da2-da6 .da2,.da2-da6 .da3,.da2-da6 .da4,.da2-da6 .da5,.da2-da6 .da6{width:18.11764706%;}.da1-da4 .da1,.da1-da4 .da2,.da1-da4 .da3,.da1-da4 .da4,.da2-da5 .da2,.da2-da5 .da3,.da2-da5 .da4,.da2-da5 .da5,.da3-da6 .da3,.da3-da6 .da4,.da3-da6 .da5,.da3-da6 .da6{width:22.78106509%;}.da1-da3 .da1,.da1-da3 .da2,.da1-da3 .da3,.da2-da4 .da2,.da2-da4 .da3,.da2-da4 .da4,.da3-da5 .da3,.da3-da5 .da4,.da3-da5 .da5,.da4-da6 .da4,.da4-da6 .da5,.da4-da6 .da6{width:30.67729084%;}.da1-da2,.da2-da3,.da3-da4,.da4-da5,.da5-da6{width:32.03125%;}.da1-da5 .da1-da2,.da1-da5 .da2-da3,.da1-da5 .da3-da4,.da1-da5 .da4-da5,.da2-da6 .da2-da3,.da2-da6 .da3-da4,.da2-da6 .da4-da5,.da2-da6 .da5-da6{width:38.58823529%;}.da1-da2 .da1,.da1-da2 .da2,.da2-da3 .da2,.da2-da3 .da3,.da3-da4 .da3,.da3-da4 .da4,.da4-da5 .da4,.da4-da5 .da5,.da5-da6 .da5,.da5-da6 .da6{width:46.95121951%;}.da1-da4 .da1-da2,.da1-da4 .da2-da3,.da1-da4 .da3-da4,.da2-da5 .da2-da3,.da2-da5 .da3-da4,.da2-da5 .da4-da5,.da3-da6 .da3-da4,.da3-da6 .da4-da5,.da3-da6 .da5-da6{width:48.52071006%;}.da1-da3,.da2-da4,.da3-da5,.da4-da6{width:49.0234375%;}.da1-da5 .da1-da3,.da1-da5 .da2-da4,.da1-da5 .da3-da5,.da2-da6 .da2-da4,.da2-da6 .da3-da5,.da2-da6 .da4-da6{width:59.05882353%;}.da1-da3 .da1-da2,.da1-da3 .da2-da3,.da2-da4 .da2-da3,.da2-da4 .da3-da4,.da3-da5 .da3-da4,.da3-da5 .da4-da5,.da4-da6 .da4-da5,.da4-da6 .da5-da6{width:65.33864542%;}.da1-da4,.da2-da5,.da3-da6{width:66.015625%;}.da1-da4 .da1-da3,.da1-da4 .da2-da4,.da2-da5 .da2-da4,.da2-da5 .da3-da5,.da3-da6 .da3-da5,.da3-da6 .da4-da6{width:74.26035503%;}.da1-da5 .da1-da4,.da1-da5 .da2-da5,.da2-da6 .da2-da5,.da2-da6 .da3-da6{width:79.52941176%;}.da1-da5,.da2-da6{width:83.0078125%;}.da-all{width:100%;margin-left:0;margin-right:0;}
-
-/* Desktop A grid margins and clearing ----- */
-
-.da1-da5 .da1,.da1-da5 [class*=da2],.da1-da5 [class*=da3],.da1-da5 [class*=da4],.da1-da5 .da2,.da1-da5 [class*=da3],.da1-da5 [class*=da4],.da1-da5 .da3,.da1-da5 [class*=da4],.da1-da5 .da4,.da2-da6 .da2,.da2-da6 [class*=da3],.da2-da6 [class*=da4],.da2-da6 [class*=da5],.da2-da6 .da3,.da2-da6 [class*=da4],.da2-da6 [class*=da5],.da2-da6 .da4,.da2-da6 [class*=da5],.da2-da6 .da5{margin-right:2.3529411764706%;}.da1-da4 .da1,.da1-da4 [class*=da2],.da1-da4 [class*=da3],.da1-da4 .da2,.da1-da4 [class*=da3],.da1-da4 .da3,.da2-da5 .da2,.da2-da5 [class*=da3],.da2-da5 [class*=da4],.da2-da5 .da3,.da2-da5 [class*=da4],.da2-da5 .da4,.da3-da6 .da3,.da3-da6 [class*=da4],.da3-da6 [class*=da5],.da3-da6 .da4,.da3-da6 [class*=da5],.da3-da6 .da5{margin-right:2.9585798816568%;}.da1-da3 .da1,.da1-da3 [class*=da2],.da1-da3 .da2,.da2-da4 .da2,.da2-da4 [class*=da3],.da2-da4 .da3,.da3-da5 .da3,.da3-da5 [class*=da4],.da3-da5 .da4,.da4-da6 .da4,.da4-da6 [class*=da5],.da4-da6 .da5{margin-right:3.9840637450199%;}.da1-da2 .da1,.da2-da3 .da2,.da3-da4 .da3,.da4-da5 .da4,.da5-da6 .da5{margin-right:6.0975609756098%;}[class*=-da2] [class*=-da2],[class*=-da2] .da2,[class*=-da3] [class*=-da3],[class*=-da3] .da3,[class*=-da4] [class*=-da4],[class*=-da4] .da4,[class*=-da5] [class*=-da5],[class*=-da5] .da5,[class*=-da6] [class*=-da6],[class*=-da6] .da6,[class*=-da6],.da6{margin-right:0;}
-
-/* Desktop A grid padding ----- */
-
-.da-pad{padding-left:0.9765625%;padding-right:0.9765625%;left:-0.9765625%;margin-right:0;}.da-padin{padding-left:0.9765625%;padding-right:0.9765625%;}.da1-da5 .da-pad,.da2-da6 .da-pad{padding-left:1.17647059%;padding-right:1.17647059%;left:-1.17647059%;margin-right:0;}.da1-da5 .da-padin,.da2-da6 .da-padin{padding-left:1.17647059%;padding-right:1.17647059%;}.da1-da4 .da-pad,.da2-da5 .da-pad,.da3-da6 .da-pad{padding-left:1.47928994%;padding-right:1.47928994%;left:-1.47928994%;margin-right:0;}.da1-da4 .da-padin,.da2-da5 .da-padin,.da3-da6 .da-padin{padding-left:1.47928994%;padding-right:1.47928994%;}.da-padfull{padding-left:1.953125%;padding-right:1.953125%;left:-1.953125%;margin-right:0;}.da-padinfull{padding-left:1.953125%;padding-right:1.953125%;}.da1-da3 .da-pad,.da2-da4 .da-pad,.da3-da5 .da-pad,.da4-da6 .da-pad{padding-left:1.99203187%;padding-right:1.99203187%;left:-1.99203187%;margin-right:0;}.da1-da3 .da-padin,.da2-da4 .da-padin,.da3-da5 .da-padin,.da4-da6 .da-padin{padding-left:1.99203187%;padding-right:1.99203187%;}.da1-da5 .da-padfull,.da2-da6 .da-padfull{padding-left:2.35294118%;padding-right:2.35294118%;left:-2.35294118%;margin-right:0;}.da1-da5 .da-padinfull,.da2-da6 .da-padinfull{padding-left:2.35294118%;padding-right:2.35294118%;}.da1-da4 .da-padfull,.da2-da5 .da-padfull,.da3-da6 .da-padfull{padding-left:2.95857988%;padding-right:2.95857988%;left:-2.95857988%;margin-right:0;}.da1-da4 .da-padinfull,.da2-da5 .da-padinfull,.da3-da6 .da-padinfull{padding-left:2.95857988%;padding-right:2.95857988%;}.da1-da2 .da-pad,.da2-da3 .da-pad,.da3-da4 .da-pad,.da4-da5 .da-pad,.da5-da6 .da-pad{padding-left:3.04878049%;padding-right:3.04878049%;left:-3.04878049%;margin-right:0;}.da1-da2 .da-padin,.da2-da3 .da-padin,.da3-da4 .da-padin,.da4-da5 .da-padin,.da5-da6 .da-padin{padding-left:3.04878049%;padding-right:3.04878049%;}.da1-da3 .da-padfull,.da2-da4 .da-padfull,.da3-da5 .da-padfull,.da4-da6 .da-padfull{padding-left:3.98406375%;padding-right:3.98406375%;left:-3.98406375%;margin-right:0;}.da1-da3 .da-padinfull,.da2-da4 .da-padinfull,.da3-da5 .da-padinfull,.da4-da6 .da-padinfull{padding-left:3.98406375%;padding-right:3.98406375%;}.da1-da2 .da-padfull,.da2-da3 .da-padfull,.da3-da4 .da-padfull,.da4-da5 .da-padfull,.da5-da6 .da-padfull{padding-left:6.09756098%;padding-right:6.09756098%;left:-6.09756098%;margin-right:0;}.da1-da2 .da-padinfull,.da2-da3 .da-padinfull,.da3-da4 .da-padinfull,.da4-da5 .da-padinfull,.da5-da6 .da-padinfull{padding-left:6.09756098%;padding-right:6.09756098%;}.da-pad,.da-padfull{position:relative;}.da-padin,.da-padinfull{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}[class*=-da6].da-pad,.da6.da-pad,.da-padfull{margin-right:-1.953125%;}.da1-da5 [class*=-da5].da-pad,.da1-da5 .da5.da-pad,.da1-da5 .da-padfull,.da2-da6 [class*=-da6].da-pad,.da2-da6 .da6.da-pad,.da2-da6 .da-padfull{margin-right:-2.35294118%;}.da1-da4 [class*=-da4].da-pad,.da1-da4 .da4.da-pad,.da1-da4 .da-padfull,.da2-da5 [class*=-da5].da-pad,.da2-da5 .da5.da-pad,.da2-da5 .da-padfull,.da3-da6 [class*=-da6].da-pad,.da3-da6 .da6.da-pad,.da3-da6 .da-padfull{margin-right:-2.95857988%;}[class*=-da6].da-padfull,.da6.da-padfull{margin-right:-3.90625%;}.da1-da3 [class*=-da3].da-pad,.da1-da3 .da3.da-pad,.da1-da3 .da-padfull,.da2-da4 [class*=-da4].da-pad,.da2-da4 .da4.da-pad,.da2-da4 .da-padfull,.da3-da5 [class*=-da5].da-pad,.da3-da5 .da5.da-pad,.da3-da5 .da-padfull,.da4-da6 [class*=-da6].da-pad,.da4-da6 .da6.da-pad,.da4-da6 .da-padfull{margin-right:-3.98406375%;}.da1-da5 [class*=-da5].da-padfull,.da1-da5 .da5.da-padfull,.da2-da6 [class*=-da6].da-padfull,.da2-da6 .da6.da-padfull{margin-right:-4.70588235%;}.da1-da4 [class*=-da4].da-padfull,.da1-da4 .da4.da-padfull,.da2-da5 [class*=-da5].da-padfull,.da2-da5 .da5.da-padfull,.da3-da6 [class*=-da6].da-padfull,.da3-da6 .da6.da-padfull{margin-right:-5.91715976%;}.da1-da2 [class*=-da2].da-pad,.da1-da2 .da2.da-pad,.da1-da2 .da-padfull,.da2-da3 [class*=-da3].da-pad,.da2-da3 .da3.da-pad,.da2-da3 .da-padfull,.da3-da4 [class*=-da4].da-pad,.da3-da4 .da4.da-pad,.da3-da4 .da-padfull,.da4-da5 [class*=-da5].da-pad,.da4-da5 .da5.da-pad,.da4-da5 .da-padfull,.da5-da6 [class*=-da6].da-pad,.da5-da6 .da6.da-pad,.da5-da6 .da-padfull{margin-right:-6.09756098%;}.da1-da3 [class*=-da3].da-padfull,.da1-da3 .da3.da-padfull,.da2-da4 [class*=-da4].da-padfull,.da2-da4 .da4.da-padfull,.da3-da5 [class*=-da5].da-padfull,.da3-da5 .da5.da-padfull,.da4-da6 [class*=-da6].da-padfull,.da4-da6 .da6.da-padfull{margin-right:-7.96812749%;}.da1-da2 [class*=-da2].da-padfull,.da1-da2 .da2.da-padfull,.da2-da3 [class*=-da3].da-padfull,.da2-da3 .da3.da-padfull,.da3-da4 [class*=-da4].da-padfull,.da3-da4 .da4.da-padfull,.da4-da5 [class*=-da5].da-padfull,.da4-da5 .da5.da-padfull,.da5-da6 [class*=-da6].da-padfull,.da5-da6 .da6.da-padfull{margin-right:-12.19512195%;}
-
-/* Desktop A grid relationships ----- */
-
-.da1+[class*=da3-],.da1+.da3,[class*=da2-],[class*=da2-][class*=da2-].da-clear,.da2,.da2.da2.da-clear,[class*=-da2]+[class*=da4-],[class*=-da2]+.da4,.da2+.da4,.da2+[class*=da4-],[class*=-da3]+[class*=da5-],[class*=-da3]+.da5,.da3+.da5,.da3+[class*=da5-],[class*=-da4]+.da6,.da4+.da6{margin-left:16.9921875%;}.da1-da5 .da1+[class*=da3-],.da1-da5 .da1+.da3,.da1-da5 [class*=da2-],.da1-da5 [class*=da2-][class*=da2-].da-clear,.da1-da5 .da2,.da1-da5 .da2.da2.da-clear,.da1-da5 [class*=-da2]+[class*=da4-],.da1-da5 [class*=-da2]+.da4,.da1-da5 .da2+.da4,.da1-da5 .da2+[class*=da4-],.da1-da5 [class*=-da3]+.da5,.da1-da5 .da3+.da5,.da2-da6 .da2+[class*=da4-],.da2-da6 .da2+.da4,.da2-da6 [class*=da3-],.da2-da6 [class*=da3-][class*=da3-].da-clear,.da2-da6 .da3,.da2-da6 .da3.da3.da-clear,.da2-da6 [class*=-da3]+[class*=da5-],.da2-da6 [class*=-da3]+.da5,.da2-da6 .da3+.da5,.da2-da6 .da3+[class*=da5-],.da2-da6 [class*=-da4]+.da6,.da2-da6 .da4+.da6{margin-left:20.47058824%;}.da1-da4 .da1+[class*=da3-],.da1-da4 .da1+.da3,.da1-da4 [class*=da2-],.da1-da4 [class*=da2-][class*=da2-].da-clear,.da1-da4 .da2,.da1-da4 .da2.da2.da-clear,.da1-da4 [class*=-da2]+.da4,.da1-da4 .da2+.da4,.da2-da5 .da2+[class*=da4-],.da2-da5 .da2+.da4,.da2-da5 [class*=da3-],.da2-da5 [class*=da3-][class*=da3-].da-clear,.da2-da5 .da3,.da2-da5 .da3.da3.da-clear,.da2-da5 [class*=-da3]+.da5,.da2-da5 .da3+.da5,.da3-da6 .da3+[class*=da5-],.da3-da6 .da3+.da5,.da3-da6 [class*=da4-],.da3-da6 [class*=da4-][class*=da4-].da-clear,.da3-da6 .da4,.da3-da6 .da4.da4.da-clear,.da3-da6 [class*=-da4]+.da6,.da3-da6 .da4+.da6{margin-left:25.73964497%;}.da1+[class*=da4-],.da1+.da4,[class*=-da2]+[class*=da5-],[class*=-da2]+.da5,.da2+.da5,.da2+[class*=da5-],[class*=da3-],[class*=da3-][class*=da3-].da-clear,.da3,.da3.da3.da-clear,[class*=-da3]+.da6,.da3+.da6{margin-left:33.984375%;}.da1-da3 .da1+.da3,.da1-da3 [class*=da2-],.da1-da3 [class*=da2-][class*=da2-].da-clear,.da1-da3 .da2,.da1-da3 .da2.da2.da-clear,.da2-da4 .da2+.da4,.da2-da4 [class*=da3-],.da2-da4 [class*=da3-][class*=da3-].da-clear,.da2-da4 .da3,.da2-da4 .da3.da3.da-clear,.da3-da5 .da3+.da5,.da3-da5 [class*=da4-],.da3-da5 [class*=da4-][class*=da4-].da-clear,.da3-da5 .da4,.da3-da5 .da4.da4.da-clear,.da4-da6 .da4+.da6,.da4-da6 [class*=da5-],.da4-da6 [class*=da5-][class*=da5-].da-clear,.da4-da6 .da5,.da4-da6 .da5.da5.da-clear{margin-left:34.66135458%;}.da1-da5 .da1+[class*=da4-],.da1-da5 .da1+.da4,.da1-da5 [class*=-da2]+.da5,.da1-da5 .da2+.da5,.da1-da5 [class*=da3-],.da1-da5 [class*=da3-][class*=da3-].da-clear,.da1-da5 .da3,.da1-da5 .da3.da3.da-clear,.da2-da6 .da2+[class*=da5-],.da2-da6 .da2+.da5,.da2-da6 [class*=-da3]+.da6,.da2-da6 .da3+.da6,.da2-da6 [class*=da4-],.da2-da6 [class*=da4-][class*=da4-].da-clear,.da2-da6 .da4,.da2-da6 .da4.da4.da-clear{margin-left:40.94117647%;}.da1+[class*=da5-],.da1+.da5,[class*=-da2]+.da6,.da2+.da6,[class*=da4-],[class*=da4-][class*=da4-].da-clear,.da4,.da4.da4.da-clear{margin-left:50.9765625%;}.da1-da4 .da1+.da4,.da1-da4 [class*=da3-],.da1-da4 [class*=da3-][class*=da3-].da-clear,.da1-da4 .da3,.da1-da4 .da3.da3.da-clear,.da2-da5 .da2+.da5,.da2-da5 [class*=da4-],.da2-da5 [class*=da4-][class*=da4-].da-clear,.da2-da5 .da4,.da2-da5 .da4.da4.da-clear,.da3-da6 .da3+.da6,.da3-da6 [class*=da5-],.da3-da6 [class*=da5-][class*=da5-].da-clear,.da3-da6 .da5,.da3-da6 .da5.da5.da-clear{margin-left:51.47928994%;}.da1-da2 .da2,.da1-da2 .da2.da2.da-clear,.da2-da3 .da3,.da2-da3 .da3.da3.da-clear,.da3-da4 .da4,.da3-da4 .da4.da4.da-clear,.da4-da5 .da5,.da4-da5 .da5.da5.da-clear,.da5-da6 .da6,.da5-da6 .da6.da6.da-clear{margin-left:53.04878049%;}.da1-da5 .da1+.da5,.da1-da5 [class*=da4-],.da1-da5 [class*=da4-][class*=da4-].da-clear,.da1-da5 .da4,.da1-da5 .da4.da4.da-clear,.da2-da6 .da2+.da6,.da2-da6 [class*=da5-],.da2-da6 [class*=da5-][class*=da5-].da-clear,.da2-da6 .da5,.da2-da6 .da5.da5.da-clear{margin-left:61.41176471%;}.da1+.da6,[class*=da5-],[class*=da5-][class*=da5-].da-clear,.da5,.da5.da5.da-clear{margin-left:67.96875%;}.da1-da3 .da3,.da1-da3 .da3.da3.da-clear,.da2-da4 .da4,.da2-da4 .da4.da4.da-clear,.da3-da5 .da5,.da3-da5 .da5.da5.da-clear,.da4-da6 .da6,.da4-da6 .da6.da6.da-clear{margin-left:69.32270916%;}.da1-da4 .da4,.da1-da4 .da4.da4.da-clear,.da2-da5 .da5,.da2-da5 .da5.da5.da-clear,.da3-da6 .da6,.da3-da6 .da6.da6.da-clear{margin-left:77.21893491%;}.da1-da5 .da5,.da1-da5 .da5.da5.da-clear,.da2-da6 .da6,.da2-da6 .da6.da6.da-clear{margin-left:81.88235294%;}.da6,.da6.da6.da-clear{margin-left:84.9609375%;}[class*=da1-] [class*=da1-],[class*=da1-] .da1,[class*=da1]+[class*=da2],[class*=da2-] [class*=da2-],[class*=da2-] .da2,[class*=da2]+[class*=da3],[class*=da3-] [class*=da3-],[class*=da3-] .da3,[class*=da3]+[class*=da4],[class*=da4-] [class*=da4-],[class*=da4-] .da4,[class*=da4]+[class*=da5],[class*=da5-] [class*=da5-],[class*=da5-] .da5,[class*=da5]+[class*=da6],[class*=da6-] [class*=da6-],[class*=da6-] .da6,[class*=da6]+[class*=da7]{margin-left:0;}
-
-.da1,[class*=da1-],.da-all,.da-clear{clear:left;}
-
-/* Desktop A hiding ----- */
-
-.da-hide{display:none !important;}
-
-/* Desktop B grid: 4 column / gutter: 1.953125% ---------------------------------------- */
-
-[class*=db1],[class*=db2],[class*=db3],[class*=db4],.db-all{display:block;float:left;margin-right:1.953125%;margin-left:0;}.db1,.db2,.db3,.db4{width:23.53515625%;}.db1-db3 .db1,.db1-db3 .db2,.db1-db3 .db3,.db2-db4 .db2,.db2-db4 .db3,.db2-db4 .db4{width:31.58584535%;}.db1-db2 .db1,.db1-db2 .db2,.db2-db3 .db2,.db2-db3 .db3,.db3-db4 .db3,.db3-db4 .db4{width:48.00796813%;}.db1-db2,.db2-db3,.db3-db4{width:49.0234375%;}.db1-db3 .db1-db2,.db1-db3 .db2-db3,.db2-db4 .db2-db3,.db2-db4 .db3-db4{width:65.79292267%;}.db1-db3,.db2-db4{width:74.51171875%;}.db-all{width:100%;margin-left:0;margin-right:0;}
-
-/* Desktop B grid margins and clearing ----- */
-
-.db1-db3 .db1,.db1-db3 [class*=db2],.db1-db3 .db2,.db2-db4 .db2,.db2-db4 [class*=db3],.db2-db4 .db3{margin-right:2.6212319790301%;}.db1-db2 .db1,.db2-db3 .db2,.db3-db4 .db3{margin-right:3.9840637450199%;}[class*=-db2] [class*=-db2],[class*=-db2] .db2,[class*=-db3] [class*=-db3],[class*=-db3] .db3,[class*=-db4] [class*=-db4],[class*=-db4] .db4,[class*=-db4],.db4{margin-right:0;}
-
-/* Desktop B grid padding ----- */
-
-.db-pad{padding-left:0.9765625%;padding-right:0.9765625%;left:-0.9765625%;margin-right:0;}.db-padin{padding-left:0.9765625%;padding-right:0.9765625%;}.db1-db3 .db-pad,.db2-db4 .db-pad{padding-left:1.31061599%;padding-right:1.31061599%;left:-1.31061599%;margin-right:0;}.db1-db3 .db-padin,.db2-db4 .db-padin{padding-left:1.31061599%;padding-right:1.31061599%;}.db-padfull{padding-left:1.953125%;padding-right:1.953125%;left:-1.953125%;margin-right:0;}.db-padinfull{padding-left:1.953125%;padding-right:1.953125%;}.db1-db2 .db-pad,.db2-db3 .db-pad,.db3-db4 .db-pad{padding-left:1.99203187%;padding-right:1.99203187%;left:-1.99203187%;margin-right:0;}.db1-db2 .db-padin,.db2-db3 .db-padin,.db3-db4 .db-padin{padding-left:1.99203187%;padding-right:1.99203187%;}.db1-db3 .db-padfull,.db2-db4 .db-padfull{padding-left:2.62123198%;padding-right:2.62123198%;left:-2.62123198%;margin-right:0;}.db1-db3 .db-padinfull,.db2-db4 .db-padinfull{padding-left:2.62123198%;padding-right:2.62123198%;}.db1-db2 .db-padfull,.db2-db3 .db-padfull,.db3-db4 .db-padfull{padding-left:3.98406375%;padding-right:3.98406375%;left:-3.98406375%;margin-right:0;}.db1-db2 .db-padinfull,.db2-db3 .db-padinfull,.db3-db4 .db-padinfull{padding-left:3.98406375%;padding-right:3.98406375%;}.db-pad,.db-padfull{position:relative;}.db-padin,.db-padinfull{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}[class*=-db4].db-pad,.db4.db-pad,.db-padfull{margin-right:-1.953125%;}.db1-db3 [class*=-db3].db-pad,.db1-db3 .db3.db-pad,.db1-db3 .db-padfull,.db2-db4 [class*=-db4].db-pad,.db2-db4 .db4.db-pad,.db2-db4 .db-padfull{margin-right:-2.62123198%;}[class*=-db4].db-padfull,.db4.db-padfull{margin-right:-3.90625%;}.db1-db2 [class*=-db2].db-pad,.db1-db2 .db2.db-pad,.db1-db2 .db-padfull,.db2-db3 [class*=-db3].db-pad,.db2-db3 .db3.db-pad,.db2-db3 .db-padfull,.db3-db4 [class*=-db4].db-pad,.db3-db4 .db4.db-pad,.db3-db4 .db-padfull{margin-right:-3.98406375%;}.db1-db3 [class*=-db3].db-padfull,.db1-db3 .db3.db-padfull,.db2-db4 [class*=-db4].db-padfull,.db2-db4 .db4.db-padfull{margin-right:-5.24246396%;}.db1-db2 [class*=-db2].db-padfull,.db1-db2 .db2.db-padfull,.db2-db3 [class*=-db3].db-padfull,.db2-db3 .db3.db-padfull,.db3-db4 [class*=-db4].db-padfull,.db3-db4 .db4.db-padfull{margin-right:-7.96812749%;}
-
-/* Desktop B grid relationships ----- */
-
-.db1+[class*=db3-],.db1+.db3,[class*=db2-],[class*=db2-][class*=db2-].db-clear,.db2,.db2.db2.db-clear,[class*=-db2]+.db4,.db2+.db4{margin-left:25.48828125%;}.db1-db3 .db1+.db3,.db1-db3 [class*=db2-],.db1-db3 [class*=db2-][class*=db2-].db-clear,.db1-db3 .db2,.db1-db3 .db2.db2.db-clear,.db2-db4 .db2+.db4,.db2-db4 [class*=db3-],.db2-db4 [class*=db3-][class*=db3-].db-clear,.db2-db4 .db3,.db2-db4 .db3.db3.db-clear{margin-left:34.20707733%;}.db1+.db4,[class*=db3-],[class*=db3-][class*=db3-].db-clear,.db3,.db3.db3.db-clear{margin-left:50.9765625%;}.db1-db2 .db2,.db1-db2 .db2.db2.db-clear,.db2-db3 .db3,.db2-db3 .db3.db3.db-clear,.db3-db4 .db4,.db3-db4 .db4.db4.db-clear{margin-left:51.99203187%;}.db1-db3 .db3,.db1-db3 .db3.db3.db-clear,.db2-db4 .db4,.db2-db4 .db4.db4.db-clear{margin-left:68.41415465%;}.db4,.db4.db4.db-clear{margin-left:76.46484375%;}[class*=db1-] [class*=db1-],[class*=db1-] .db1,[class*=db1]+[class*=db2],[class*=db2-] [class*=db2-],[class*=db2-] .db2,[class*=db2]+[class*=db3],[class*=db3-] [class*=db3-],[class*=db3-] .db3,[class*=db3]+[class*=db4],[class*=db4-] [class*=db4-],[class*=db4-] .db4,[class*=db4]+[class*=db5]{margin-left:0;}
-
-.db1,[class*=db1-],.db-all,.db-clear{clear:left;}
-
-/* Desktop B hiding ----- */
-
-.db-hide{display:none !important;}
-
-/* compound grid relationships ----- */
-
-[class*=-da3]+[class*=db3-],.da3+[class*=db3-],[class*=-da3]+.db3,.da3+.db3,[class*=-db2]+[class*=da4-],.db2+[class*=da4-],[class*=-db2]+.da4,.db2+.da4{margin-left:0.000000%;}.da1+[class*=db2-],.da1+.db2,[class*=-da4]+.db4,.da4+.db4,.db1+[class*=da3-],.db1+.da3,[class*=-db3]+.da6,.db3+.da6{margin-left:8.496094%;}[class*=-da2]+[class*=db3-],.da2+[class*=db3-],[class*=-da2]+.db3,.da2+.db3,[class*=-db2]+[class*=da5-],.db2+[class*=da5-],[class*=-db2]+.da5,.db2+.da5{margin-left:16.992188%;}[class*=-da3]+.db4,.da3+.db4,.db1+[class*=da4-],.db1+.da4{margin-left:25.488281%;}.da1+[class*=db3-],.da1+.db3,[class*=-db2]+.da6,.db2+.da6{margin-left:33.984375%;}[class*=-da2]+.db4,.da2+.db4,.db1+[class*=da5-],.db1+.da5{margin-left:42.480469%;}.da1+[class*=db4-],.da1+.db4,.db1+[class*=da6-],.db1+.da6{margin-left:59.472656%;}
-
-}
 
 
