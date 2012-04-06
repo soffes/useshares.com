@@ -27,8 +27,7 @@ body {
   height: 100%;
   background: #1d1d1d;
   color: #999;
-  /*font: normal 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  font: normal 14px/1.5 Georgia, "Times New Roman", serif;
+  font: normal 16px/1.5 Georgia, "Times New Roman", serif;
   text-shadow: 0 1px 1px #111;
 }
 
@@ -56,7 +55,7 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  font-family: "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
+  font-family: "alternate-gothic-no-3-d","HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
 }
 h1 {
   color: #24577e;
@@ -94,24 +93,17 @@ header h2 {
   margin: -0.7em 0 0;
   font-size: 1.25rem;
 }
+header h1 {
+  line-height: 1.375;
+}
+header h2 {
+  margin: -0.7em 0 0;
+  font-size: 1.25rem;
+  color: #777;
+}
 header img {
   margin-right: 0.5em;
   float: left;
-}
-
-footer {
-  padding: 1em 0;
-  font-size: 0.75rem;
-}
-
-.disclaimer {
-  padding-top:0;
-  margin-top:0;
-  margin-bottom:2.5em;
-  font-size: 0.75em;
-  font-style: italic;
-  color: #777;
-  text-shadow: none;
 }
 
 .app-store {
@@ -130,15 +122,49 @@ header .app-store {
   top: 1.15em;
 }
 
+
+#main h1 {
+  line-height: 1.1;
+  font-size: 2.25em;
+  width: 92%;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.04em;
+  color: #ccc;
+}
+
+.disclaimer {
+  padding-top:0;
+  margin-top:0;
+  margin-bottom:2.5em;
+  font-size: 0.75em;
+  font-style: italic;
+  color: #777;
+  text-shadow: none;
+}
+
+.iphone {
+  position: relative;
+}
+.iphone-fade {
+  position: relative;
+  max-width: 80%;
+  z-index: 100;
+}
+.screens {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index:1;
+}
+
 .buy {
   margin: 2em 0 4em;
 }
 
-/* buy button */
 .button {
   padding: 0.75em;
   color: #ddd;
-  border: 3px solid #222;
+  border: 0;
   background-color: #24577e; /* Old browsers */
   background-repeat: repeat-x; /* Repeat the gradient */
   background-image: -moz-linear-gradient(top, #507998 0%, #24577e 100%); /* FF3.6+ */
@@ -150,17 +176,17 @@ header .app-store {
   font-family: "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
   font-size: 1.25em;
   text-shadow: 0 1px 0 #214f73;
-  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.08);
-     -moz-box-shadow: 0 1px 0 rgba(255,255,255,.08);
-          box-shadow: 0 1px 0 rgba(255,255,255,.08);
-  -webkit-border-radius: 0.5em;
-     -moz-border-radius: 0.5em;
-          border-radius: 0.5em;
+  -webkit-border-radius: 0.375em;
+     -moz-border-radius: 0.375em;
+          border-radius: 0.375em;
+  -webkit-box-shadow: 0 1px 1px #191919;
+     -moz-box-shadow: 0 1px 1px #191919;
+          box-shadow: 0 1px 1px #191919;
   -webkit-background-clip: padding-box;
 }
 .button:hover {
   background: #24577e;
-  border: 3px solid #222;
+  border: 0;
   color: #fff;
 }
 .button:active {
@@ -169,16 +195,6 @@ header .app-store {
 .button em {
   font-style: normal;
   font-size:1.25em;
-}
-
-
-#main h1 {
-  line-height: 1.1;
-  font-size: 2.25em;
-  width: 92%;
-  margin-bottom: 0.5em;
-  letter-spacing: 0.04em;
-  color: #ccc;
 }
 
 .buzz {
@@ -197,86 +213,9 @@ blockquote footer {
   padding-top: 0;
 }
 
-/* mailing list signup form */
-.mailinglist-form {
-  clear: both;
-  margin: 1em auto;
-}
-.signup {
-  position: relative;
-  width: 100% margin:  0 auto;
-}
-
-.signup input {
-  margin: 0 auto;
-  width: 80%;
-  padding: 1em;
-  background: #33383c;
-  border: 1px solid #1a1a1a;
-  font-style: normal;
-  font-size: 1em;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  color: #e6e2d6;
-  outline: 0;
-}
-
-.signup button {
-  display: block;
-  position: relative;
-  width: 7em;
-  margin: 1.375em auto;
-  padding: 0.6em 0.5em 0.25em;
-  color: #bcbeb9;
-  cursor: pointer;
-  font-family: "bebas-neue";
-  font-size: 1.25em;
-  letter-spacing: 0.1em;
-  text-align: center;
-  background: none;
-  border: 1px solid rgba(255,255,255,0.7);
-}
-.win.chrome .signup button,
-.win.gecko .signup button {
-  padding-top: 0.25em;
-}
-
-.signup button:before {
-  position: absolute;
-  top: -0.25em;
-  left: 0.175em;
-  right: 0.175em;
-  bottom: -0.25em;
-  content: "";
-  border: 1px solid rgba(255,255,255,0.9);
-  z-index:-1;
-}
-.win.ff3_6 .signup button:before {
-  border: 0;
-  -moz-box-shadow: none;
-}
-
-.signup button:hover,
-.signup button:hover:before {
-  -webkit-transition: all .1s ease-in-out;
-     -moz-transition: all .1s ease-in-out;
-       -o-transition: all .1s ease-in-out;
-      -ms-transition: all .1s ease-in-out;
-          transition: all .1s ease-in-out;
-  -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.4);
-     -moz-box-shadow: 0 0 15px rgba(255,255,255,0.4);
-          box-shadow: 0 0 15px rgba(255,255,255,0.4);
-}
-
-.signup button:hover:before {
-  top: -0.25em;
-  left: -0.25em;
-  right: -0.25em;
-  bottom: -0.25em;
+footer {
+  padding: 1em 0;
+  font-size: 0.75rem;
 }
 
 @media all and (min-width: 37.5em) {
@@ -307,7 +246,7 @@ blockquote footer {
     top: 0em;
   }
   .iphone-fade {
-
+    max-width: 100%;
   }
   .iphone {
     width: 100%;
