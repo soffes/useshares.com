@@ -152,7 +152,9 @@ header .app-store {
 
 .iphone {
   position: relative;
-  height: 530px; /* Ugh. This needs to be fixed. */
+  max-width: 744px;
+  min-height: 396px;
+  padding-top: 150%;
 }
 
 .iphone img {
