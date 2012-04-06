@@ -4,13 +4,16 @@ blue: #24577e
 tan: #e8e4d8
 */
 
+
 @font-face {
-  font-family: 'bebas-neue';
-  src: url('/fonts/BebasNeue-webfont.eot');
-  src: local('☺'),
-         url('/fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'BebasNeueRegular';
+    src: url('/fonts/bebasneue-webfont-webfont.eot');
+    src: url('/fonts/bebasneue-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/bebasneue-webfont-webfont.woff') format('woff'),
+         url('/fonts/bebasneue-webfont-webfont.ttf') format('truetype'),
+         url('/fonts/bebasneue-webfont-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -58,13 +61,15 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  font-family: "alternate-gothic-no-3-d","HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
+  font-family: "HelveticaNeue-CondensedBold", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
 }
 
 h1 {
   color: #24577e;
   color: #ccc;
   font-size: 2.25em;
+  text-shadow: none;
 }
 
 /* basic layout */
@@ -91,7 +96,7 @@ header {
 
 header h1 {
   margin: 0;
-  font-family: "bebas-neue", "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
+  font-family: "BebasNeueRegular", "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
   line-height: 1.5;
 }
 
