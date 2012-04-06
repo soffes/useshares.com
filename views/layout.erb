@@ -1,84 +1,40 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if lt IE 7 ]><html lang="en" class="ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="en" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <title>Shares App</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-  <link rel="stylesheet" href="/style.css" />
-
+  <link rel="stylesheet" href="/stylesheets/application.css" />
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
 </head>
-
 <body>
-
   <div id="container">
-
     <header>
-      <img src="images/icon_57.png" alt="" />
+      <img src="/images/icon_57.png" alt="" />
       <hgroup>
         <h1>Shares</h1>
         <h2>Your gains, at a glance</h2>
       </hgroup>
-
     </header>
-
     <%= yield %>
-
     <footer class="da-all">
-
       <p class="copyright">
         &copy;2012 — Brought to you by <a href="http://samsoff.es" rel="external nofollow" target="_blank">Sam Soffes</a> &amp; <a href="http://jbrewer.me" rel="external nofollow" target="_blank">Josh Brewer</a>.
         <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%73%61%6d@%67%65%74%73%68%61%72%65%73%61%70%70.%63%6f%6d" class="contact">Contact</a>
       </p>
-
     </footer>
-
-  </div> <!--! end of #container -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-  <script type="text/javascript">
-    // form label script
-    $(document).ready(function(){
-      $('input').focus(function(){
-        var newValue = $(this).val();
-        if($(this).val() == 'Your email address'){
-          $(this).attr('value','');
-        } else {
-          $(this).val(newValue);
-        }
-      });
-
-      $('input').blur(function(){
-        var newValue = $(this).val();
-        if($(this).val() == ''){
-          $(this).attr('value','Your email address');
-        } else {
-          $(this).val(newValue);
-        }
-      });
-    });
-    // add screenshots if tablet or bigger
-    if (document.documentElement.clientWidth > 600) {
-      $('.iphone-fade').attr('src', 'images/iphone4.png');
-      //$('.iphone').append('<div class="screens"><img src="images/screenshot.jpg" /></div>');
-      $('header').append('<a href="http://itunes.com/apps/shares" class="app-store">Available on the iPhone app store</a>');
-
-    }
-  </script>
-
+  </div>
+  <%= yield_content :javascripts %>
+  <% if ENV['RACK_ENV'] == 'production' %>
   <script type="text/javascript">var _gauges=_gauges||[];(function(){var t=document.createElement('script');t.async=true;t.id='gauges-tracker';t.setAttribute('data-site-id','4f59b56af5a1f55b6d00001d');t.src='//secure.gaug.es/track.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(t, s);})();</script>
+  <% end %>
 </body>
 </html>

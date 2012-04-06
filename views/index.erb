@@ -2,10 +2,18 @@
   <h1>The easiest way to get a pulse on your investments.</h1>
   <aside>
     <div class="iphone">
-      <img src="images/screenshot_2x_alt.png" alt="" class="iphone-fade" />
+      <img src="http://assets.getsharesapp.com/images/screenshot01.png" alt="" />
+      <img src="http://assets.getsharesapp.com/images/screenshot02.png" alt="" />
+      <img src="http://assets.getsharesapp.com/images/screenshot03.png" alt="" />
     </div>
   </aside>
-  <p class="valueprop">Shares gives you a simple overview of all the companies you have invested in. You can add *new companies or update existing investiments in one easy step.  Quickly swipe to see more information for each company. It's your gains, at a glance.</p>
+  <p class="valueprop">Shares gives you a simple overview of all the companies you have invested in. You can add new companies* or update existing investments in one easy step.  Quickly swipe to see more information for each company. It's your gains, at a glance.</p>
   <p class="disclaimer">*Shares currently only works with publicly traded companies on the US Stock Exchange.</p>
-  <p class="buy"><a href="http://itunes.com/apps/shares" class="button">Buy Shares for just <em>$0.99</em></a></p>
+  <p class="buy"><a href="http://itunes.com/apps/shares" class="button">Buy Shares for just $0.99</a></p>
 </section>
+
+<% content_for :javascripts do %>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="/javascripts/jquery.cycle.lite.js"></script>
+<script>$(function(){$('.iphone').cycle({fx: 'fade'});});</script>
+<% end %>

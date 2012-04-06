@@ -6,17 +6,19 @@ tan: #e8e4d8
 
 @font-face {
   font-family: 'bebas-neue';
-  src: url('fonts/BebasNeue-webfont.eot');
+  src: url('/fonts/BebasNeue-webfont.eot');
   src: local('☺'),
-         url('fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype');
+         url('/fonts/BebasNeue-webfont.woff') format('woff'), url('fonts/BebasNeue-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 html {
   height: 100%;
 }
@@ -49,6 +51,7 @@ a:hover {
   color: #24577e;
   border-bottom: 1px solid;
 }
+
 .app-store,
 .app-store:hover {
   border-bottom: 0;
@@ -57,6 +60,7 @@ a:hover {
 h1, h2, h3, h4 {
   font-family: "alternate-gothic-no-3-d","HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif;
 }
+
 h1 {
   color: #24577e;
   color: #ccc;
@@ -84,30 +88,35 @@ header {
     background: rgba(29,29,29,1);
   border-bottom: 3px double #333;
 }
+
 header h1 {
   margin: 0;
   font-family: "bebas-neue", "HelveticaNeue-CondensedBold", "Arial Narrow", Arial, sans-serif;
   line-height: 1.5;
 }
+
 header h2 {
   margin: -0.7em 0 0;
   font-size: 1.25rem;
 }
+
 header h1 {
   line-height: 1.375;
 }
+
 header h2 {
   margin: -0.7em 0 0;
   font-size: 1.25rem;
   color: #777;
 }
+
 header img {
   margin-right: 0.5em;
   float: left;
 }
 
 .app-store {
-  background: url(../images/appstorebadge_trans.png) no-repeat 0 0;
+  background: url(/images/appstorebadge_trans.png) no-repeat 0 0;
   width: 174px;
   height: 57px;
   text-indent: 100%;
@@ -121,7 +130,6 @@ header .app-store {
   right: 0;
   top: 1.15em;
 }
-
 
 #main h1 {
   line-height: 1.1;
@@ -144,12 +152,15 @@ header .app-store {
 
 .iphone {
   position: relative;
+  height: 530px; /* Ugh. This needs to be fixed. */
 }
-.iphone-fade {
+
+.iphone img {
   position: relative;
   max-width: 80%;
   z-index: 100;
 }
+
 .screens {
   position: absolute;
   left: 0;
@@ -184,17 +195,15 @@ header .app-store {
           box-shadow: 0 1px 1px #191919;
   -webkit-background-clip: padding-box;
 }
+
 .button:hover {
   background: #24577e;
   border: 0;
   color: #fff;
 }
+
 .button:active {
   background: #1a3e59;
-}
-.button em {
-  font-style: normal;
-  font-size:1.25em;
 }
 
 .buzz {
@@ -205,9 +214,11 @@ blockquote {
   margin:0;
   font-style: italic;
 }
+
 blockquote p {
   margin-bottom: 0;
 }
+
 blockquote footer {
   text-align: right;
   padding-top: 0;
@@ -222,48 +233,51 @@ footer {
   body {
     font-size: 16px;
   }
+  
   #container {
     max-width: 64em;
   }
+  
   #main {
     position: relative;
     width: 55%;
     margin-left:45%;
     min-height: 47em;
   }
+  
   #main h1 {
     font-size: 3.25em;
     width: 90%;
     margin-bottom: 0.5em;
   }
+  
   .valueprop {
     font-size: 1.25em;
   }
+  
   aside {
     width: 75%;
     margin-left: -83%;
     position: absolute;
     top: 0em;
   }
-  .iphone-fade {
+  
+  .iphone img {
     max-width: 100%;
   }
+  
   .iphone {
     width: 100%;
     height: 100%;
-    position: relative;
   }
+  
   header h1 {
     line-height: 1.375;
   }
+  
   header h2 {
     margin: -0.7em 0 0;
     font-size: 1.25rem;
     color: #777;
   }
-
 }
-
-
-
-

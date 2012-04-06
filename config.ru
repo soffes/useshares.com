@@ -2,5 +2,5 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-require './main'
-run Sinatra::Application
+require './shares'
+run Shares
