@@ -7,3 +7,7 @@ group :development do
   gem 'heroku'
   gem 'shotgun'
 end
+
+group :production do
+  gem 'hirefireapp'
+end
