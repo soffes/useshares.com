@@ -294,3 +294,8 @@ footer {
     color: #777;
   }
 }
+
+em {
+  font-style: normal;
+  color: #4F9452;
+}
