@@ -4,7 +4,7 @@ ruby '2.0.0'
 
 gem 'sinatra'
 gem 'sinatra-content-for2', require: 'sinatra/content_for2'
-gem 'thin'
+gem 'puma'
 
 group :development do
   gem 'shotgun'
