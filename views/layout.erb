@@ -1,37 +1,38 @@
 <!doctype html>
-<!--[if lt IE 7 ]><html lang="en" class="ie6"><![endif]-->
-<!--[if IE 7 ]><html lang="en" class="ie7"><![endif]-->
-<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Shares App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="stylesheet" href="/stylesheets/application.css" />
-  <!--[if lt IE 9]>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <title>Shares &mdash; Your gains, at a glance</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/96f84b1d-e391-4ec6-a269-bce4c09cfb3a.css">
+  <link rel="stylesheet" href="/assets/application.css">
 </head>
 <body>
-  <div id="container">
-    <header>
-      <img src="/images/icon_57.png" alt="" />
-      <hgroup>
-        <h1>Shares</h1>
+  <header>
+    <div class="grater grater-container">
+      <div>
+        <a class="icon" href="#{APP_STORE_URL}" rel="external nofollow"><img src="/assets/icon.svg"></a>
+      </div>
+      <div>
+        <h1><a href="/" rel="home">Shares</a></h1>
         <h2>Your gains, at a glance</h2>
-      </hgroup>
-    </header>
-    <%= yield %>
-    <footer class="da-all">
-      <p class="copyright">
-        &copy;2012 — Brought to you by <a href="http://samsoff.es" rel="external nofollow" target="_blank">Sam Soffes</a> &amp; <a href="http://jbrewer.me" rel="external nofollow" target="_blank">Josh Brewer</a>.
-        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%73%61%6d@%67%65%74%73%68%61%72%65%73%61%70%70.%63%6f%6d" class="contact">Contact</a>
-      </p>
-    </footer>
-  </div>
+        <p><%= app_store_button %></p>
+      </div>
+    </div>
+  </header>
+  <%= yield %>
+  <footer class="grater grater-container">
+    <div>
+      &copy; <%= Time.now.year %> <a href="http://nothingmagical.com" rel="external nofollow">Nothing Magical Inc.</a>
+    </div>
+    <div>
+      <ul>
+        <li><a href="/support">Support</a></li>
+        <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%73%61%6d@%67%65%74%73%68%61%72%65%73%61%70%70.%63%6f%6d">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
   <%= yield_content :javascripts %>
   <% if ENV['RACK_ENV'] == 'production' %>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-39514643-3','getsharesapp.com');ga('send','pageview');</script>

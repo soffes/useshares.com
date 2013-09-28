@@ -1,11 +1,30 @@
 source 'https://rubygems.org'
 
+# Latest Ruby
 ruby '2.0.0'
 
-gem 'sinatra'
-gem 'sinatra-content-for2', require: 'sinatra/content_for2'
+# Web server
 gem 'puma'
 
+# Simple HTTP
+gem 'sinatra'
+
+# Better templating
+gem 'sinatra-content-for2', require: 'sinatra/content_for2'
+
+# Faster ERB
+gem 'erubis'
+
+# Asset pipeline
+gem 'sprockets'
+
+# Stylesheets
+gem 'sass'
+gem 'sprockets-sass'
+gem 'bourbon'
+gem 'grater'
+
 group :development do
+  # Reloading in development
   gem 'shotgun'
 end
