@@ -10,6 +10,7 @@ div.iphone {
     background: #000;
     width: 320px;
     height: 568px;
+    overflow: hidden;
   }
 
   @media #{$grater-small-media-query} {

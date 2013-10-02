@@ -13,7 +13,7 @@ class Shares < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    erb :home
   end
 
   get '/support' do

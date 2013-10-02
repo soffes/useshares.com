@@ -8,6 +8,7 @@ map '/assets' do
   sprockets.append_path 'assets/images'
   sprockets.append_path 'assets/javascripts'
   sprockets.append_path 'assets/stylesheets'
+  sprockets.append_path 'vendor/assets/javascripts'
   run sprockets
 end
 
