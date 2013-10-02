@@ -37,6 +37,12 @@ h3 {
   margin-bottom: 0.5em;
 }
 
+h4 {
+  font-family: $avenir-heavy;
+  font-size: 22px;
+  color: #999;
+}
+
 @import "components/layout";
 @import "components/iphone";
 
