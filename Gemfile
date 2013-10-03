@@ -15,6 +15,9 @@ gem 'sinatra-content-for2', require: 'sinatra/content_for2'
 # Faster ERB
 gem 'erubis'
 
+# Use the right host
+gem 'rack-canonical-host'
+
 # Asset pipeline
 gem 'sprockets'
 

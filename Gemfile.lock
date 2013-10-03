@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.5)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
@@ -12,6 +13,9 @@ GEM
     puma (2.6.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
+    rack-canonical-host (0.0.8)
+      addressable
+      rack (~> 1.0)
     rack-protection (1.5.0)
       rack
     sass (3.2.11)
@@ -42,6 +46,7 @@ DEPENDENCIES
   erubis
   grater
   puma
+  rack-canonical-host
   sass
   shotgun
   sinatra
