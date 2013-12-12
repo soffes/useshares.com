@@ -18,7 +18,7 @@ body {
   line-height: 1.4em;
 }
 
-p {
+p, ul {
   margin-bottom: 1.4em;
 }
 
@@ -44,6 +44,18 @@ mark {
   background-color: $highligh-color;
   padding: 2px;
   box-shadow: $highligh-color 0 0 5px;
+}
+
+code {
+  font-family: Courier, monospace;
+}
+
+ul.list {
+  padding-left: 1.4em;
+
+  li {
+    list-style: disc;
+  }
 }
 
 h3 {
