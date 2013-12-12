@@ -87,16 +87,21 @@ body > footer {
 
   a {
     color: $light-text-color;
-    text-decoration: none;
 
     &:hover {
       color: $link-color;
     }
   }
 
-  li {
+  ul {
     float: right;
+    text-align: right;
+  }
+
+  li {
+    float: left;
     margin-left: 1em;
+    display: inline-block;
   }
 
   @media #{$grater-small-media-query} {
@@ -106,6 +111,16 @@ body > footer {
     li {
       float: none;
       display: inline;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    ul {
+      float: none;
+      text-align: center;
+      width: 100%;
     }
   }
 }

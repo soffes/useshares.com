@@ -27,8 +27,23 @@ p.disclaimer {
   font-size: 0.8em;
 }
 
+strong {
+  font-family: $avenir-heavy;
+}
+
+span.asterisk {
+  color: $light-text-color;
+}
+
 a {
   color: $link-color;
+  text-decoration: none;
+}
+
+mark {
+  background-color: $highligh-color;
+  padding: 2px;
+  box-shadow: $highligh-color 0 0 5px;
 }
 
 h3 {
@@ -45,6 +60,7 @@ h4 {
 
 @import "components/layout";
 @import "components/iphone";
+@import "components/press";
 
 a.app-store {
   width: 186px;
