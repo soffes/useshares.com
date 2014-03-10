@@ -13,7 +13,9 @@ html {
 }
 
 body {
-  font: 20px $avenir-medium;
+  font-family: 'Whitney A', 'Whitney B';
+  font-weight: 400;
+  font-size: 20px;
   color: #555;
   line-height: 1.4em;
 }
@@ -28,7 +30,7 @@ p.disclaimer {
 }
 
 strong {
-  font-family: $avenir-heavy;
+  font-weight: 700;
 }
 
 span.asterisk {
@@ -59,13 +61,13 @@ ul.list {
 }
 
 h3 {
-  font-family: $avenir-heavy;
+  font-weight: 700;
   font-size: 30px;
   margin-bottom: 0.5em;
 }
 
 h4 {
-  font-family: $avenir-heavy;
+  font-weight: 700;
   font-size: 22px;
   color: #999;
 }
