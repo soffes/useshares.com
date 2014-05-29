@@ -1,5 +1,5 @@
 class Shares < Sinatra::Base
-  APP_STORE_URL = 'https://itunes.apple.com/app/shares-2/id717510981'.freeze
+  APP_STORE_URL = 'https://itunes.apple.com/app/shares-2/id717510981?mt=8&uo=4&at=1l3vmtU'.freeze
 
   helpers Sinatra::ContentFor2
   helpers do
