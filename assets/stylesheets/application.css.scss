@@ -27,6 +27,14 @@ p, ul {
 p.disclaimer {
   color: $light-text-color;
   font-size: 0.8em;
+
+  a {
+    color: $light-text-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
 }
 
 strong {
@@ -40,6 +48,10 @@ span.asterisk {
 a {
   color: $link-color;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 mark {
